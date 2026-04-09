@@ -1,3 +1,5 @@
+## Usage: python crop_pdfs.py <input_dir> <top> <right> <bottom> <left> --switch-lr
+
 import os
 from pypdf import PdfReader, PdfWriter
 import sys
