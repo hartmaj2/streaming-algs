@@ -22,3 +22,16 @@
   - sum + count $\to$ retrieve average
   - min + max $\to$ range of temperatures
   - how to retrieve the median?
+
+## Data models
+
+- summaries can be built upon various types of data
+  - sets, multisets, weighted sets (represented as one vector), vectors (stored together in a vector of vectors -> a matrix), geometric data, graphs, 
+
+## Operations on summaries
+
+- initialize - how the data structure will look at start (can involve randomized stuff)
+- update 
+- merge - to allow parallel processing
+- construct - create the summary from given data in offline setting (to save time then repeating update calls)
+- compress - when a summary grows over time, this operation tries to reduce its size
