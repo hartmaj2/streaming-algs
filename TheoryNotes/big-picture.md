@@ -35,3 +35,39 @@
 - merge - to allow parallel processing
 - construct - create the summary from given data in offline setting (to save time then repeating update calls)
 - compress - when a summary grows over time, this operation tries to reduce its size
+
+## Models of computation
+
+- streaming model - we just need the ability to UPDATE
+- parallel processing 
+  - how to assign which machine gets which data?
+  - we can use MERGE to construct the final summary
+- distributed processing 
+
+## Implementation of summaries
+
+- nothing important (implementation details)
+
+## Guarantees
+
+- if we were able to answer every possible query exactly $\rarr$ we could construct a sequence of questions to find out what the original data were
+  - this leads to lower bounds on size of every summary which provides such guarantees
+- to provide compact summary $\rarr$ we must lose some accuracy
+  - randomization vs approximation
+
+### Approximation
+
+- when data is numerical
+  - relative approximation
+    - we can guarantee that we are within $\epsilon$ relative error from the true answer
+  - additive approximation
+    - we're within some fixed $\delta$ from the true answer
+
+### Randomization
+
+- we claim that we give a correct answer with some probability
+
+### Combining
+
+- we can combine the two above to claim a guarantee in form
+  - with some probability, we give an $\epsilon$ approximation of the correct answer
