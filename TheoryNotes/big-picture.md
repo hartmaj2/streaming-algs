@@ -71,3 +71,20 @@
 
 - we can combine the two above to claim a guarantee in form
   - with some probability, we give an $\epsilon$ approximation of the correct answer
+
+## Summaries in applications
+
+### Data center
+
+- monitor statistics in a big data center
+  - problem: we need to keep track of hundreds of GB of data and be able to send this data per second for evaluation
+  - we can use Count-Min Sketch or SpaceSaving
+
+### Network Scanning Detection
+
+- want to detect if somebody performs a port scan
+- we can use a counter alongside a Bloom Filter to count only distinct addresses accessed
+
+### Service Quality Management
+
+- TODO
