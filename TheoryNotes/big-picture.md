@@ -124,5 +124,17 @@
     - then substitute $k$ for $k^2$
     - then use the fact that $\Pr[ X^2 \geq k^2] = \Pr[|X| \geq k]$
   - Chernoff bounds
-    - 
+    - skipped - how to arrive at picking $t = \frac{2}{5}\rho$
+
 - variance and covariance formulas
+
+- union bound
+  - we can use it when we have $n$ bad events and the probability of each event is some small function w.r.t. $n$, like $\frac{1}{n^2}$.
+
+- principle of deferred decisions
+  - scenario: we want to sample uniformly at random from disjoint sets $S_1$ an $S_2$ of sizes $n_1$ and $n_2$
+  - we can do this by choosing an element from the union with prob $\frac{1}{n_1+n_2}$
+  - but we can achieve the same by first picking a set from which we will sample and then choose uniformly from the selected set
+    - rule: pick $S_1$ with prob $\frac{n_1}{n_1+n_2}$.
+    - instead of having to pick the item right away, we instead first pick the set
+    - we do the decision, which specific element to pick later
