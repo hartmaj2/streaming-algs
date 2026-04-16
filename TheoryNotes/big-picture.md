@@ -107,4 +107,22 @@
   - separate n data into k buckets s.t. each bucket has around n/k elements
   - then the buckets correspond to quantiles, we just takes as many buckets as we can and then take part of the last bucket
 
-TODO: sometimes read 1.3.5 (page 25) and the rest
+### Ad Impression Monitoring and Audience Analysis
+
+- goal - see how many distinct people have seen our ad
+  - we can use KMV or HLL
+- interesting question
+  - have summary for views by attributes - female, age 18-35, university educated etc.
+  - we can combine these using KMV or HLL to get approximation of the views by people in the intersection
+
+## Computational and Mathematical tools
+
+- tail bounds
+  - Markov and proof (we want to use the formulation with $\mathbb{E}[X]$ in the fraction, where do we need the assumption $X \geq 0$)
+  - Chebyshev inequality 
+    - use markov on $Y = (X - \mathbb{E}[X])^2$
+    - then substitute $k$ for $k^2$
+    - then use the fact that $\Pr[ X^2 \geq k^2] = \Pr[|X| \geq k]$
+  - Chernoff bounds
+    - 
+- variance and covariance formulas
