@@ -87,4 +87,24 @@
 
 ### Service Quality Management
 
-- TODO
+- we have SLA such as k percent of responses are made within t milliseconds
+  - we want to check if we adhere to this agreements precisely but sometimes we want just a quick estimate which will allow us to see if there is a risk of not adhering and that we should make a proper checkup
+- if we had fixed x and t, we could just have counters but we want flexibility in parameter k and t
+  - we will use GK or Q-Digest
+- Q-Digest - bounded space no matter how many items summarized
+- GK - grows logarithmically with size of input
+- moving window of response times
+  - we divide the times into buckets and have a summary for each bucket, if a window goes over multiple buckets, we merge all of them together
+
+### Query optimization
+
+- in databases operation takes time different times if we perform them in different orders
+- to find out the best order, we need to estimate, how many items are there with given key for example 
+- usually focus on selectivity of a predicate - how many items of the given predicate satisfy a given property
+  - use RandomSample to estimate this
+
+- technique - equi depth histogram
+  - separate n data into k buckets s.t. each bucket has around n/k elements
+  - then the buckets correspond to quantiles, we just takes as many buckets as we can and then take part of the last bucket
+
+TODO: sometimes read 1.3.5 (page 25) and the rest
