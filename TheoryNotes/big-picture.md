@@ -138,3 +138,24 @@
     - rule: pick $S_1$ with prob $\frac{n_1}{n_1+n_2}$.
     - instead of having to pick the item right away, we instead first pick the set
     - we do the decision, which specific element to pick later
+
+- Chernoff bounds argument
+  - scenario: 
+    - we want to estimate quantity $Q$
+    - we can measure to get result $x$ which is close enough to the real value with probability $p$
+  - we can estimate this quantity by taking the median of $n$ measurements
+  - observation: 
+    - if less than $\frac{1}{2}$ of the estimates is bad, then the median is a good estimate
+  - the estimates are just bernoulli variables with prob $p$
+  - we can calculate, that $(1-p)$ fraction of estimates is bad (by binomial distribution)
+    - thus we know that the median estimate is bad only if $(1-p) \cdot k \geq \frac{1}{2}$
+      - so the number of bad events must exceed its expected value by a fraction of $\frac{1}{2(1-p)}$
+  - we can solve the point above by applying Chernoff bound
+
+- Hash functions
+  - t-wise independence
+    - small probability that any $t$-tuple of distinct values maps to a chosen $t$-tuple of images
+  - cryptographic hash functions
+    - hard to invert - only possibility is to try evaluating all values
+    - are 10 times slower than the fastest non-cryptographic functions
+  - popular non-cryptographic hashing function - murmurhash from 2008
