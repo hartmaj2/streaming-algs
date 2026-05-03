@@ -22,3 +22,7 @@
 2.
 - we can find heavy hitters for some epsilon that lie in the range $(\frac{\epsilon}{2},\epsilon)$ by running MG on $k \coloneqq \frac{\epsilon}{2}$ and then taking only the items where in the associative array they have value larger than $m \frac{\epsilon}{2}$
   - this works because of the bound again
+
+## Exercises
+
+- completed first 2/3 in the lecnotes
