@@ -1,5 +1,7 @@
 # Misra Gries Algorithm
 
+- lecnotes page 10-12
+
 - it's variations can be used to find heavy hitters or indices of items for parameter $k$ s.t. their frequency is larger than $\frac{m}{k}$
 
 ## How it works
