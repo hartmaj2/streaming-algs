@@ -32,3 +32,7 @@ IMPORTANT: by 2-universality, the author means 2-independence!
   
 - now we want to bound probability that $\Pr[X \geq \frac{k}{2}]$ where $X$ tracks how many bad results we encountered
   - here we have constant relative error $\delta$ but $\mu = k\frac{\sqrt{2}}{3}$ so as we increase $k$ then the probability of bad result decreases exponentially with $k$
+
+## Memory demands
+
+- just $\log n$ bits to store the hash function (we just need to store a two numbers which are at most $n$) and $\log \log n$ bits to store the tracking value $z$ (the value has size at most $\log n$ so takes $\log \log n$ bits of memory)
