@@ -55,7 +55,7 @@
 - SET-DISJOINTNESS
   - check if Alice's and Bob's strings are disjoint when viewed as characteristic vectors
 
-## Proofs
+## Proofs (Deterministic)
 
 ### One way index bound
 
@@ -75,3 +75,24 @@
 - notice, that this tells us, that there is same number of messages as there are possible inputs for Alice
 - show a contradiction if we assume protocol has cost $\leq N -1$
   - beause the cost is linked to the size of the set of all possible messages that Alice can send
+
+## Proofs (Randomized)
+
+- TODO
+
+## How it connects to data streaming
+
+- in streaming algs, we have an algorithm $\mathcal{A}$ which processes stream $\sigma$ and uses $S$ bits of memory
+
+- to get a communication game, we split the stream $\sigma$ in $t$ segments arbitrarily and imagine $t$ players
+  - the segment $\sigma_i$ can be thought of as the input to the function that the players are trying to compute together
+
+- the players are then communicating together in order to reproduce the correct answer as by $\mathcal{A}$
+
+- we can see that we can use the existence of the algorithm to construct a protocol
+  - the players just make the algorithm run on their $\sigma_i$ and then send the state of the memory (at most $S$ bits) to the next player
+  - for $t$ players and $p$ rounds, the communication complexity of the protocol is $(tp-1)S$
+
+- in general, we suppose that such algorithm $\mathcal{A}$ exists and that it uses only $S$ memory to achieve something
+  - now the players get a communication complexity problem
+  - then they create a stream corresponding to their problem, run alg $\mathcal{A}$ on the stream and send the $S$ bits to the next player who continues running $\mathcal{A}$ on his part of the stream which he constructs in order for it, to tell him something about the result, they need to compute
