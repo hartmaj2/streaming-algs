@@ -1,0 +1,3 @@
+- how the distributions work
+  - pareto distribution
+  - gumbel distribution
