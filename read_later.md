@@ -18,3 +18,8 @@
 
 - implications of the paper [Matrix Factorization Approach in Turnstile Streaming](https://arxiv.org/html/2607.28819) on dynamic streams
   - what does it mean for me? does Pavel know about it?
+
+- so the interpolation is called piecewise because we do not have to know the whole function to be able to interpolate
+- do we compute the interpolation every time we perform a query?
+
+- why the heuristic error uses the $l_i^2$ normalization factor?
