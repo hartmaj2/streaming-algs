@@ -1,0 +1,26 @@
+# SplineSketch reading progress
+
+- [x] Abstract
+- [x] 1 Introduction
+  - [x] 1.1 Overview of Our Approach
+- [x] 2 Related Work
+- [x] 3 Description of SplineSketch
+  - [ ] 3.1 Consolidating Buckets
+  - [ ] 3.2 Merging Two SplineSketches
+  - [ ] 3.3 Theoretical Properties
+- [ ] 4 Implementation Details
+  - [ ] 4.1 Implementations of Bucket Consolidation
+  - [ ] 4.2 Handling Frequent Items
+- [ ] 5 Experimental Evaluation
+  - [ ] 5.1 Evaluation in the Streaming Setting
+  - [ ] 5.2 Evaluation of Mergeability
+  - [ ] 5.3 Inputs with Heavy Hitters
+  - [ ] 5.4 Ablation Studies
+- [ ] 6 Conclusions and Discussion
+- [ ] Acknowledgments
+- [ ] References
+- [ ] A Bounds on Middle Point of Monotonic Cubic Polynomials
+- [ ] B Analysis of Uniform Error Guarantees
+  - [ ] B.1 Analysis in the Streaming Setting
+  - [ ] B.2 Analysis of Mergeability
+  - [ ] B.3 Existence of Joinable Pair of Buckets
